@@ -1,0 +1,24 @@
+﻿@page
+@using System.ComponentModel.DataAnnotations;
+@model RazorCrud.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h2>Create</h2>
+
+<p>Enter Your Name:</p>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>Name: <input asp-for="Customer.Name" /> </div>
+    <div>Email: <input asp-for="Customer.Email" /> </div>
+    <button type="submit" >Save</button>
+</form>    
+
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
